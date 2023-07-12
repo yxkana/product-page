@@ -6,14 +6,14 @@ import Image from "next/image";
 import { useDisclosure } from "@chakra-ui/react";
 
 export function ProductImages() {
-  var images: Array<string> = [
+  const images: Array<string> = [
     "/promo-photos/image-product-1.jpg",
     "/promo-photos/image-product-2.jpg",
     "/promo-photos/image-product-3.jpg",
     "/promo-photos/image-product-4.jpg",
   ];
 
-  var [currentImg, setCurrentImage] = useState(0);
+  const [currentImg, setCurrentImage] = useState(0);
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const useIsomorphicLayoutEffect =
@@ -48,7 +48,7 @@ export function ProductImages() {
   function next() {
     if (currentImg < images.length - 1) {
       setCurrentImage((prev: number) => {
-        let newPrev = prev + 1;
+        const newPrev = prev + 1;
         return newPrev;
       });
     } else {
@@ -59,7 +59,7 @@ export function ProductImages() {
   function prev() {
     if (currentImg !== 0) {
       setCurrentImage((prev: number) => {
-        let newPrev = prev - 1;
+        const newPrev = prev - 1;
         return newPrev;
       });
     } else {
@@ -116,7 +116,7 @@ export function ProductImages() {
           <div className="my-7 flex justify-center gap-8">
             {images.map((data, index) => {
               return (
-                <div className="relative">
+                <div key={index} className="relative">
                 <div
                   onClick={() => {
                     setCurrentImage((prev) => {

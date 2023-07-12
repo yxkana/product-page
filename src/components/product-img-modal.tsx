@@ -17,7 +17,7 @@ const ProductImgModal: React.FC<{
   isOpen: boolean;
   onClose: () => void;
 }> = (props) => {
-  var [currentImg, setCurrentImage] = useState(0);
+  const [currentImg, setCurrentImage] = useState(0);
 
   return (
     <>
@@ -45,7 +45,7 @@ const ProductImgModal: React.FC<{
               <div className="my-7 flex justify-center gap-8">
                 {props.gallery.map((data, index) => {
                   return (
-                    <div className="relative">
+                    <div key={index} className="relative">
                       <div
                         onClick={() => {
                           setCurrentImage((prev) => {

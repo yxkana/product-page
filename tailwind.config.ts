@@ -4,6 +4,9 @@ export default {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      screens: {
+        tablet: "1023px",
+      },
       colors: {
         /* Main colors */
         primary_orange: "hsl(26, 100%, 55%)",

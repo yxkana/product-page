@@ -11,7 +11,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
   return (
     <main className={kumbh.className}>
       <div className="container flex h-screen items-center m-auto flex-col">
-        <div className="h-[8%] md:h-[20%]">
+        <div className="h-[8%] tablet:h-[15%]">
           <Header></Header>
         </div>
         <div className="h-[90%] flex">

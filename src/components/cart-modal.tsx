@@ -111,7 +111,7 @@ export function CartModal() {
               <div className="z-30 w-[520px] rounded-xl flex flex-col  bg-white  p-8 shadow-xl  shadow-greishDarkBlue">
                 <h3 className="text-lg font-bold">Cart</h3>
                 <div className="divider"></div>
-                <div className="flex h-44 flex-col gap-5 overflow-y-hidden">
+                <div className="flex h-44 flex-col gap-5 overflow-y-auto">
                   {cartData.length !== 0 ? (
                     cartData.map((data, index) => {
                       return (

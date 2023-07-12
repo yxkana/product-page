@@ -39,7 +39,8 @@ export function Header() {
 
   return (
     <div className="flex h-full items-center">
-      {useMediaQuery(768) ? (
+      {useMediaQuery(1023) ? (
+         /* ---------------------- Mobile LayOut ------------------- */
         <div className="flex h-full w-screen items-center justify-between px-6">
           <div className="flex gap-5">
             <DrawerCom></DrawerCom>
@@ -62,9 +63,10 @@ export function Header() {
             ></Image>
           </div>
         </div>
+        /* ---------------------- Desktop LayOut ------------------- */
       ) : (
-        <div className="flex flex-col w-screen  mx-5 container">
-          <div className="container flex justify-between">
+        <div className="flex flex-col w-screen container">
+          <div className="container flex mt-5 justify-between">
           <div className="flex items-center gap-20">
           <Image
             className="h-6 w-36"
@@ -105,7 +107,7 @@ export function Header() {
             ></Image>
           </div>
           </div>
-          <div className="divider  mt-8"></div>
+          <div className="divider  mt-5"></div>
         </div>
       )}
     </div>
