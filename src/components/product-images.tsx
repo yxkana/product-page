@@ -90,7 +90,7 @@ export function ProductImages() {
           ></ChevronRight>
 
           <Image
-            className="w-screen md:mx-auto md:w-[540px] md:rounded-3xl"
+            className="w-screen hover:cursor-pointer md:mx-auto md:w-[540px] md:rounded-3xl"
             src={images[currentImg]!}
             height={720}
             width={720}
@@ -101,7 +101,7 @@ export function ProductImages() {
         <div>
           <Image
           onClick={onOpen}
-            className="w-screen md:mx-auto md:w-[540px] md:rounded-3xl"
+            className="w-screen hover:cursor-pointer md:mx-auto md:w-[540px] md:rounded-3xl"
             src={images[currentImg]!}
             height={720}
             width={720}
